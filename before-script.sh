@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Exit on error
+set -e
+
 # Linter
 go get github.com/golang/lint/golint
 
