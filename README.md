@@ -4,6 +4,8 @@ Scripts for testing Go projects on Travis.
 
 ## Usage
 
+In your `.travis.yml`:
+
 ```yml
 language: go
 
