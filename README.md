@@ -1,6 +1,6 @@
 # gotravis
 
-Go scripts for testing on Travis.
+Scripts for testing Go projects on Travis.
 
 ## Usage
 
