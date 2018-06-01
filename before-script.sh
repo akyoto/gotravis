@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Create a list of all the .go files, excluding vendor/
-GO_FILES=$(find . -iname '*.go' -type f | grep -v /vendor/)
+export GO_FILES=$(find . -iname '*.go' -type f | grep -v /vendor/)
 
 # Linter
 go get github.com/golang/lint/golint
