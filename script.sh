@@ -13,7 +13,7 @@ go vet ./...
 megacheck ./...
 
 # Forbid code with huge functions (high cyclomatic complexity)
-gocyclo -over 19 $(find . -iname '*.go' -type f | grep -v /vendor/)
+#gocyclo -over 19 $(find . -iname '*.go' -type f | grep -v /vendor/)
 
 # Run one last linter
 golint -set_exit_status $(go list ./...)
