@@ -4,7 +4,7 @@
 set -e
 
 # Linter
-go get github.com/golang/lint/golint
+go get golang.org/x/lint/golint
 
 # Megacheck
 go get honnef.co/go/tools/cmd/megacheck
