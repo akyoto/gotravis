@@ -7,7 +7,7 @@ set -e
 go get golang.org/x/lint/golint
 
 # Megacheck
-go get honnef.co/go/tools/cmd/megacheck
+go get honnef.co/go/tools/cmd/staticcheck
 
 # Cyclomatic complexity
 go get github.com/fzipp/gocyclo
