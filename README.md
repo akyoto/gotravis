@@ -10,7 +10,7 @@ In your `.travis.yml`:
 language: go
 
 go:
-  - 1.10.x
+  - 1.12.x
   - master
 
 install: true

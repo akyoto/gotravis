@@ -3,14 +3,11 @@
 # Exit on error
 set -e
 
-# Linter
-go get golang.org/x/lint/golint
+# Use a fixed version of golangci-lint to get reproducible tests
+GOLANGCILINTVERSION=1.16.0
 
-# Megacheck
-go get honnef.co/go/tools/cmd/staticcheck
+# Install golangci-lint
+curl -sfL https://install.goreleaser.com/github.com/golangci/golangci-lint.sh | sh -s -- -b $(go env GOPATH)/bin v$GOLANGCILINTVERSION
 
-# Cyclomatic complexity
-go get github.com/fzipp/gocyclo
-
-# Download test dependencies of the repository
-go get -t -v ./...
+# Download dependencies
+go mod download
