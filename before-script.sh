@@ -3,11 +3,11 @@
 # Exit on error
 set -e
 
-echo "Installing revive..."
-go get -u github.com/mgechev/revive
+# Use a fixed version of golangci-lint to get reproducible tests
+LINTER_VERSION=1.16.0
 
-echo "Installing staticcheck..."
-go get -u honnef.co/go/tools/cmd/staticcheck
+echo "Installing golangci-lint..."
+curl -sfL https://install.goreleaser.com/github.com/golangci/golangci-lint.sh | sh -s -- -b $(go env GOPATH)/bin v$LINTER_VERSION
 
 echo "Building dependencies..."
 go get -t -v ./...
