@@ -3,9 +3,6 @@
 # Exit on error
 set -e
 
-# Enable Go modules
-export GO111MODULE=on
-
 echo "Installing revive..."
 go get -u github.com/mgechev/revive
 
